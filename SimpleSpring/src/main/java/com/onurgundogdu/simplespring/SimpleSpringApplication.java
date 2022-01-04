@@ -18,13 +18,7 @@ public class SimpleSpringApplication {
 
             SpringApplication.run(SimpleSpringApplication.class, args);
     }
-    @GetMapping
-    public List<Student> greetings()
-    {
-        return List.of(new Student(
-                1L,"Onur Gündoğdu", LocalDate.of(1994, Month.JUNE,3),28
-        ));
-    }
+
 
 
 }
