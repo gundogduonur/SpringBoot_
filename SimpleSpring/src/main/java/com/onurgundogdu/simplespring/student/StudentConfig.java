@@ -19,13 +19,12 @@ public class StudentConfig {
         return args -> {
             Student onur=new Student(
             "Onur Gündoğdu",
-                    LocalDate.of(1994, Month.JUNE,3),
-                    28
+                    LocalDate.of(1994, Month.JUNE,3)
             );
             Student okan=new Student(
                     "Okan Gündoğdu",
-                    LocalDate.of(1993, Month.JANUARY,30),
-                    29
+                    LocalDate.of(1993, Month.JANUARY,30)
+
             );
             repository.saveAll(List.of(onur,okan));
         };

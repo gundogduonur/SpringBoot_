@@ -2,6 +2,7 @@ package com.onurgundogdu.simplespring.student;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.Period;
 
 @Entity
 @Table
@@ -12,6 +13,7 @@ public class Student {
     private Long id;
     private String fullname;
     private LocalDate birthday;
+    @Transient
     private Integer age;
 
     public Student()
@@ -19,17 +21,15 @@ public class Student {
 
     }
 
-    public Student(Long id, String fullname, LocalDate birthday, Integer age) {
+    public Student(Long id, String fullname, LocalDate birthday) {
         this.id = id;
         this.fullname = fullname;
         this.birthday = birthday;
-        this.age = age;
     }
 
-    public Student(String fullname, LocalDate birthday, Integer age) {
+    public Student(String fullname, LocalDate birthday) {
         this.fullname = fullname;
         this.birthday = birthday;
-        this.age = age;
     }
 
     public Long getId() {
@@ -57,7 +57,8 @@ public class Student {
     }
 
     public Integer getAge() {
-        return age;
+
+        return Period.between(this.birthday,LocalDate.now()).getYears();
     }
 
     public void setAge(Integer age) {
