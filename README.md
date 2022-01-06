@@ -2,6 +2,8 @@
 
 Simple spring boot project
 
+Using Postgresql,Postman
+
 ## Annotations
 
 @RestController = Rest API yapısını dışarıya açmak için kullanılır.
