@@ -14,4 +14,8 @@ Simple spring boot project
 
 @Service = Belirtilen sınıfın bir servis sınıfı olduğunu belirtmek için kullanılır. 
 
+@Configuration = Java tabanlı konfigürasyon işlemi yapan bir anotasyondur.@Bean tanımlaması içeren fonksiyonlar içerir.
+
+@Repository = Bean dao ya da persistence sınıfı olduğunu belirtmek için kullanılmaktadır.
+
 localhost:port/path_name ile tarayıcı üzerinden görüntülenebilir.
